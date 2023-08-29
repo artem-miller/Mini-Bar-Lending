@@ -1,13 +1,244 @@
-body {
+@import url('https://fonts.cdnfonts.com/css/druk-wide-bold');
+
+/* html and body styles  */
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: #fff;
+}
+
+.container {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* header styles */
+
+.header {
+  padding: 20px;
+}
+
+.header__title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.header__title h1 {
+  font-size: 130px;
+  font-family: "Druk Wide Bold", sans-serif;
+  font-weight: bold;
+}
+
+.header__title a {
+  font-size: 32px;
+  height: 20px;
+  margin-top: 50px;
+}
+
+.header__title div {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__title a:hover {
+  opacity: .7;
+  transition: opacity 300ms ease-in-out;
+}
+
+.images-rotate {
+  margin-top: 50px;
+}
+
+/* other styles */
+
+.lime-button {
+  padding: 15px;
+  border: none;
+  border-radius: 99px;
+  background: #e1ff27;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+  color: #282828;
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+
+.lime-button:hover {
+  background: #fff;
+  transition: 400ms ease-in-out;
+}
+
+.info {
+  margin-top: 30px;
+  width: 800px;
+  margin: 20px;
+}
+
+/* drink styles */
+
+.drink h1 {
+  font-size: 100px;
+  font-family: "Druk Wide Bold", sans-serif;
+  font-weight: bold;
+}
+
+.drink h2 {
+  width: 600px;
+}
+
+.drink__title-red {
+  color: #e73c1e;
+}
+
+.drink__title-yellow {
+  color: #e1fe27;
+}
+
+.drink__title-green {
+  color: #659933;
+}
+
+.drink img {
+  width: 450px;
+  height: 450px;
+  margin-right: 50px;
+}
+
+.drink {
+  padding: 20px;
+}
+
+.drink div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/* footer styles */
+.footer {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.footer__header {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__header a {
+  margin-left: 10px;
+  text-decoration: underline;
+}
+
+.footer__header a:hover {
+  color: #e1fe27;
+  text-decoration: none;
+  transition: 300ms ease-in-out;
+}
+
+.footer__info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.footer img {
+  width: 400px;
+  margin-top: 10px;
+}
+
+.footer__payment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* other classes */
+
+.rotate--run {
+  animation-name: rotate_animation;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+.no-display {
+  display: inline;
+}
+
+/* Media and animations  */
+@media (max-width: 414px) {
+  .no-display {
+    display: none;
+  }
+  
+  .header__title h1 {
+    font-size: 64px;
+  }
+
+  .header__title a {
+    margin-top: 0;
+  }
+
+  .info h1 {
+    width: 350px;
+    font-size: 25px;
+  }
+
+  .drink h1 {
+    font-size: 50px;
+    width: 300px;
+    margin-top: 10px;
+  }
+
+  .drink {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .drink img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .footer__payment img {
+    width: 300px;
+  }
+}
+
+@media(min-width: 768px) {
+  .images-rotate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@keyframes rotate_animation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
